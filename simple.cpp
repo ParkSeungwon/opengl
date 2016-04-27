@@ -1,9 +1,13 @@
 #include <gl.h>
 #include <glut.h>
+#include <iostream>
+using namespace std;
 
 void RenderScene()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1.0, 0.0, 0.0);
+	glutSolidTeapot(100);
 	glFlush();
 }
 
@@ -19,6 +23,7 @@ int main(int argc, char** argv)
 	glutCreateWindow("Simple");
 	glutDisplayFunc(RenderScene);
 	SetupRC();
+	cout << glGetString(GL_EXTENSIONS);
 	glutMainLoop();
 }
 
