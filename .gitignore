@@ -3,3 +3,7 @@
 *.vim
 *~
 
+find
+.
+-size
++3M
